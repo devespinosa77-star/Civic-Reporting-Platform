@@ -1,29 +1,27 @@
 const express = require('express');
 
-const app = express();
-
 const path = require('path');
 
 const db = require('./queries');
 
-const PORT = 9002
+const app = express();
 
 // Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Host react app as static files
 app.use(express.static(path.resolve(__dirname, '../client/build')))
+
+const PORT = 8000 
 
 // Routes
 app.get('/', (req, res) => {
-    // We'll do some stuff here
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-})
+}) 
 
-// CRUD
-// CREATE: add data to the database
-// READ: get data from the database
 app.get('/users', db.getUsers);
-// UPDATE: update data in the database 
-// DELETE: delete data from the database
-
+app.post('/new', db.createUser);
 
 // Starting Express on our PORT
 app.listen(PORT, () => {
