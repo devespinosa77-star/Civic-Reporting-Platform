@@ -5,7 +5,7 @@ A full-stack web application where residents can report local infrastructure iss
 ## Live Demo
 
 **Deployed app:** _Add your Render URL here after deployment_  
-Example: `https://your-app-name.onrender.com`
+Render: https://civic-reporting-platform-kzu5.onrender.com/
 
 ## Team Members
 
