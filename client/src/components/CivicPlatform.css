@@ -1,0 +1,263 @@
+.civic-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.civic-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.civic-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  color: #1a2b3c;
+}
+
+.civic-header p {
+  margin: 0;
+  color: #5a6b7d;
+  line-height: 1.5;
+}
+
+.civic-section-title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: #1a2b3c;
+}
+
+.civic-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.civic-form {
+  display: grid;
+  gap: 0.875rem;
+}
+
+.civic-form label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.civic-form input,
+.civic-form textarea,
+.civic-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  background: #f8fafc;
+}
+
+.civic-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.civic-form input:focus,
+.civic-form textarea:focus,
+.civic-form select:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+.civic-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.civic-btn:active {
+  transform: translateY(1px);
+}
+
+.civic-btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.civic-btn-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.civic-btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.civic-btn-danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.civic-btn-danger:hover {
+  background: #fecaca;
+}
+
+.civic-message {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.civic-message-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.civic-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.civic-filter-btn {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.civic-filter-btn:hover {
+  background: #e2e8f0;
+}
+
+.civic-filter-btn.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.civic-reports-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.civic-report-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+.civic-report-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.civic-report-meta {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.civic-report-description {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.civic-status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.civic-status-open {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.civic-status-in_progress {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.civic-status-resolved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.civic-report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.civic-report-actions label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.civic-report-actions select {
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font: inherit;
+}
+
+.civic-empty {
+  text-align: center;
+  color: #64748b;
+  padding: 1.5rem;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+}
+
+@media (min-width: 640px) {
+  .civic-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .civic-form .civic-field-full {
+    grid-column: 1 / -1;
+  }
+
+  .civic-form .civic-submit-row {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 639px) {
+  .civic-report-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .civic-report-actions select,
+  .civic-report-actions .civic-btn {
+    width: 100%;
+  }
+}
