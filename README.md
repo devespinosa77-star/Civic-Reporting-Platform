@@ -131,7 +131,7 @@ Use this checklist to satisfy the assignment deployment requirement.
 
 ### A. Push code to GitHub
 
-- [ ] Repo is public: `https://github.com/devespinosa77-star/Full-Stack-App`
+- [ ] Repo is public: `https://github.com/devespinosa77-star/Civic-Reporting-Platform.git`
 - [ ] Latest code is pushed
 
 ### B. Create Render PostgreSQL
