@@ -179,8 +179,6 @@ In Render Postgres → **Connect** → run the same `CREATE TABLE reports (...)`
 
 ## Reflections
 
-_Replace this section with your own notes before submission._
-
 - **What I learned:** Connecting React to an Express API, using PostgreSQL for persistence, and structuring CRUD endpoints.
 - **Challenges:** Managing route order in Express, restarting Node after code changes, and creating the `reports` schema in Postgres.
 - **Next improvements:** Add responsive CSS, geolocation capture in the form, and optional city API integration.
