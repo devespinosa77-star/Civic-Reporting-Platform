@@ -10,18 +10,22 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const PORT = process.env.PORT || 8000;
+
+// API routes (before static files so paths like /reports always hit the API)
+app.get('/reports', db.getReports);
+app.get('/reports/:id', db.getReportById);
+app.post('/reports', db.createReport);
+app.patch('/reports/:id/status', db.updateReportStatus);
+app.delete('/reports/:id', db.deleteReport);
+
 // Host react app as static files
-app.use(express.static(path.resolve(__dirname, '../client/build')))
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-const PORT = 8000 
-
-// Routes
+// SPA entry (after API + static)
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-}) 
-
-app.get('/users', db.getUsers);
-app.post('/new', db.createUser);
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
 
 // Starting Express on our PORT
 app.listen(PORT, () => {
