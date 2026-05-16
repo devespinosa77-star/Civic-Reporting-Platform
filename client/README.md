@@ -1,4 +1,4 @@
-# CMP 464 – HW 2
+# CMP 343 – HW 2
 
 **Due Date:** 3/27/2023 by 11:59pm
 
